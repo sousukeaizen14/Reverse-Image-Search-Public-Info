@@ -4,7 +4,7 @@ from serpapi import GoogleSearch
 
 app = Flask(__name__, template_folder="../templates")
 
-API_KEY = "PASTE_API_KEY_SERPAPI_DI_SINI"
+API_KEY = "xxxxxxxxx"
 
 @app.route("/", methods=["GET", "POST"])
 def index():
