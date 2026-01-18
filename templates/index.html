@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Reverse Image Search</title>
+<style>
+body {
+    background:#0f0f0f;
+    color:#ffffff;
+    font-family:Arial;
+    text-align:center;
+}
+.box {
+    background:#1c1c1c;
+    padding:20px;
+    width:420px;
+    margin:60px auto;
+    border-radius:10px;
+}
+input, button {
+    margin:10px;
+}
+a {
+    color:#4da6ff;
+}
+small {
+    color:#aaaaaa;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Reverse Image Search</h2>
+
+    <p>
+        Cari <b>informasi publik</b> yang terkait dengan gambar.<br>
+        Aplikasi ini <u>tidak</u> mengidentifikasi individu.
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">Search</button>
+    </form>
+
+    <small>
+        Images are not stored. Results come from public web sources.
+    </small>
+
+    <hr>
+
+    {% for r in results %}
+        <p><b>{{ r.title }}</b></p>
+        <p>{{ r.source }}</p>
+        <a href="{{ r.link }}" target="_blank">Open Source</a>
+        <hr>
+    {% endfor %}
+</div>
+
+</body>
+</html>
