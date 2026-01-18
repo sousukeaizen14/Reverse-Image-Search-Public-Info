@@ -20,5 +20,5 @@ face recognition technology.
 ## Installation
 ```bash
 git clone https://github.com/sousukeaizen14/reverse-image-search-public-info.git
-cd reverse-image-search-public-info
+cd Reverse-Image-Search-Public-Info
 pip install -r requirements.txt
